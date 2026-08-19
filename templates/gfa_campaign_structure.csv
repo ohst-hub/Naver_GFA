@@ -1,4 +1,0 @@
-Funnel_Stage,Campaign_Name,Targeting_Type,Ad_Format,Main_Placement,Optimization_Goal,Recommended_Budget_Ratio,Key_KPI
-TOFU (Awareness),GFA_TOFU_Demographics,Demographic + Category Interest,Banner Image / Rich Display,Naver Main / News / Webtoon,Reach / Clicks,30%,CTR / CPC / Brand Search Volume
-MOFU (Consideration),GFA_MOFU_Intent,Keyword Intent + Journey Target,Dynamic Catalog / Native Feed,Naver Shopping / Cafe / Blog,Clicks / Landing Views,40%,Store Visits / Cart Add Rate
-BOFU (Conversion),GFA_BOFU_Retargeting,Website Retargeting + ADVoost AI,ADVoost Dynamic Banner,Smart Channel / Home Feed,Conversions / ROAS,30%,ROAS / CPA / Direct Purchase
