@@ -1,17 +1,19 @@
-# 네이버 GFA 매출 성장 전략 제안서
+# 네이버 GFA 매출 성장 전략 제안서 (LinkPrice 버전)
 
 GitHub Pages에서 바로 열어볼 수 있는 **10페이지 웹 제안서**입니다.
+상단에는 **NAVER × LinkPrice** 로고가 반영되어 있습니다.
 
 ## 파일 구성
 - `index.html` : 제안서 본문
 - `styles.css` : 디자인 / 반응형 / 인쇄 스타일
 - `script.js` : 페이지 이동 / 목차
+- `linkprice-logo.png` : LinkPrice 로고
 - `README.md` : 사용 방법
 
 ## GitHub Pages 배포 방법
 
 1. GitHub에서 새 Repository를 생성합니다.
-2. ZIP 압축을 풀고 안의 파일 4개를 Repository 최상단에 업로드합니다.
+2. ZIP 압축을 풀고 안의 파일 전체를 Repository 최상단에 업로드합니다.
 3. Repository → **Settings**
 4. 왼쪽 메뉴 → **Pages**
 5. `Build and deployment` → `Deploy from a branch`
@@ -35,7 +37,5 @@ GitHub Pages에서 바로 열어볼 수 있는 **10페이지 웹 제안서**입�
 
 ```css
 --green:#03c75a;
---green2:#22d978;
+--green2:#02b351;
 ```
-
-※ 본 제안서는 특정 업종에 종속되지 않는 공통 영업용 구조로 제작되었습니다.
