@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ko" class="h-full overflow-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 GFA 성과형 DA 전략 제안서 | Horizontal Pitch Deck</title>
+    
+    <!-- Pretendard Font -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        naver: {
+                            DEFAULT: '#03C75A',
+                            hover: '#02b150',
+                            dark: '#028a3e',
+                            light: '#e8fbf1',
+                            subtle: '#f2fcf6'
+                        },
+                        darknavy: '#0B1120',
+                        slatecard: '#1E293B'
+                    },
+                    fontFamily: {
+                        sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            letter-spacing: -0.02em;
+        }
+        .glass-nav {
+            background: rgba(11, 17, 32, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #03C75A 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .slide-content-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(3, 199, 90, 0.4) transparent;
+        }
+        .slide-content-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .slide-content-scroll::-webkit-scrollbar-thumb {
+            background-color: rgba(3, 199, 90, 0.4);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-darknavy text-slate-100 h-full w-full overflow-hidden select-none">
+
+    <!-- Top Fixed Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-800/80 px-6 h-16 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-naver flex items-center justify-center font-black text-white text-base shadow-md shadow-naver/30">
+                N
+            </div>
+            <div>
+                <span class="text-white font-bold text-sm sm:text-base tracking-tight block">NAVER GFA STRATEGY PROPOSAL</span>
+            </div>
+        </div>
+
+        <!-- Slide Jump Quick Pills -->
+        <nav class="hidden md:flex items-center space-x-2 text-xs font-medium text-slate-400">
+            <button onclick="goToSlide(0)" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all bg-slate-800/80 text-naver font-bold border border-slate-700" data-slide="0">01. 개요</button>
+            <button onclick="goToSlide(1)" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="1">02. 시장 위기와 해법</button>
+            <button onclick="goToSlide(2)" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="2">03. GFA 4대 강점</button>
+            <button onclick="goToSlide(3)" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="3">04. 풀퍼널 전략</button>
+            <button onclick="goToSlide(4)" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="4">05. 성과 시뮬레이터</button>
+            <button onclick="goToSlide(5)" class="nav-pill px-3 py-1.5 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="5">06. 로드맵 & FAQ</button>
+        </nav>
+
+        <!-- Slide Counter & Controls -->
+        <div class="flex items-center space-x-4">
+            <span id="slide-indicator" class="text-xs font-bold tracking-widest text-naver bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                01 / 06
+            </span>
+            <div class="flex items-center space-x-1.5">
+                <button onclick="prevSlide()" class="w-8 h-8 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white flex items-center justify-center transition-all disabled:opacity-30 disabled:cursor-not-allowed" id="header-prev">
+                    <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                </button>
+                <button onclick="nextSlide()" class="w-8 h-8 rounded-lg bg-naver text-white hover:bg-naver-hover flex items-center justify-center transition-all shadow-md shadow-naver/30" id="header-next">
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Floating Arrow Buttons -->
+    <button onclick="prevSlide()" id="side-prev" class="hidden sm:flex fixed left-5 top-1/2 -translate-y-1/2 z-40 w-12 h-12 rounded-full glass-nav border border-slate-700 text-slate-300 hover:text-white hover:border-naver hover:scale-110 items-center justify-center transition-all shadow-xl disabled:opacity-0 disabled:pointer-events-none">
+        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+    </button>
+    <button onclick="nextSlide()" id="side-next" class="hidden sm:flex fixed right-5 top-1/2 -translate-y-1/2 z-40 w-12 h-12 rounded-full bg-naver/90 hover:bg-naver text-white hover:scale-110 items-center justify-center transition-all shadow-xl shadow-naver/20">
+        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Main Horizontal Slider Viewport -->
+    <main class="w-full h-full overflow-hidden">
+        <div id="slider-track" class="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
+
+            <!-- SLIDE 1: Cover / Hero -->
+            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 relative overflow-hidden bg-darknavy">
+                <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#03C75A_1px,transparent_1px)] [background-size:28px_28px]"></div>
+                <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-naver/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="max-w-5xl w-full mx-auto text-center space-y-7 relative z-10 slide-content-scroll max-h-[85vh] overflow-y-auto py-4">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 text-xs font-semibold text-naver">
+                        <span class="w-2 h-2 rounded-full bg-naver animate-ping"></span>
+                        2026 PERFORMANCE STRATEGY PROPOSAL
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
+                        디지털 마케팅의 판도가 바뀝니다.<br>
+                        <span class="gradient-text">왜 지금, 네이버 GFA인가?</span>
+                    </h1>
+
+                    <p class="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
+                        CAC 폭등과 쿠키리스 시대의 확실한 돌파구.<br>
+                        대한민국 1위 <strong class="text-white">First-Party 구매의도 데이터</strong>와 <strong class="text-white">ADVoost AI 머신러닝</strong>이 이끄는 성과형 DA 전략
+                    </p>
+
+                    <!-- Key Metric Badges -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-2">
+                        <div class="bg-slate-800/70 border border-slate-700/80 rounded-2xl p-5 backdrop-blur-md">
+                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">3,000만+</div>
+                            <div class="text-xs sm:text-sm font-bold text-white">일간 순 방문자</div>
+                            <div class="text-[11px] text-slate-400 mt-1">국내 최대 프리미엄 지면</div>
+                        </div>
+                        <div class="bg-slate-800/70 border border-slate-700/80 rounded-2xl p-5 backdrop-blur-md">
+                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">1st-Party</div>
+                            <div class="text-xs sm:text-sm font-bold text-white">검색·쇼핑 Intent</div>
+                            <div class="text-[11px] text-slate-400 mt-1">쿠키 규제 무풍지대</div>
+                        </div>
+                        <div class="bg-slate-800/70 border border-slate-700/80 rounded-2xl p-5 backdrop-blur-md">
+                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">ADVoost AI</div>
+                            <div class="text-xs sm:text-sm font-bold text-white">머신러닝 자동 입찰</div>
+                            <div class="text-[11px] text-slate-400 mt-1">CVR / ROAS 자동 최적화</div>
+                        </div>
+                        <div class="bg-slate-800/70 border border-slate-700/80 rounded-2xl p-5 backdrop-blur-md">
+                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">350~500%+</div>
+                            <div class="text-xs sm:text-sm font-bold text-white">풀퍼널 ROAS 시너지</div>
+                            <div class="text-[11px] text-slate-400 mt-1">GFA 노출 ➔ SA 검색 연동</div>
+                        </div>
+                    </div>
+
+                    <div class="pt-3">
+                        <button onclick="nextSlide()" class="px-8 py-3.5 rounded-xl bg-naver text-white font-bold hover:bg-naver-hover transition-all shadow-xl shadow-naver/30 inline-flex items-center gap-2 text-sm sm:text-base">
+                            제안서 시작하기 (Slide 2로 이동)
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: Market Crisis vs GFA Solution -->
+            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-slate-900">
+                <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
+                    <div class="text-center sm:text-left">
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">02. MARKET ANALYSIS</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+                            퍼포먼스 마케팅 3대 위기와 GFA의 돌파구
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <!-- Crisis 1 -->
+                        <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center mb-4">
+                                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-[11px] font-bold text-rose-400 uppercase tracking-wider">CRISIS 01</span>
+                                <h3 class="text-lg font-bold text-white mt-1 mb-2">글로벌 매체 CAC 폭등</h3>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                                    Meta/Google 등 주요 SNS 매체 경쟁 가열로 CPM/CPC 지속 상승, 신규 유입당 획득 비용 한계치 도달.
+                                </p>
+                            </div>
+                            <div class="p-4 bg-emerald-950/40 border border-emerald-500/30 rounded-xl">
+                                <div class="text-naver font-bold text-xs flex items-center gap-1.5 mb-1">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4"></i> GFA 해법
+                                </div>
+                                <p class="text-[11px] text-slate-200">
+                                    국내 1위 트래픽을 통해 <strong>합리적 CPC로 대규모 유효 트래픽 선점</strong>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Crisis 2 -->
+                        <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
+                                    <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">CRISIS 02</span>
+                                <h3 class="text-lg font-bold text-white mt-1 mb-2">쿠키리스 & 리타겟팅 붕괴</h3>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                                    iOS ATT 및 3rd-party 쿠키 규제로 픽셀 오디언스 모수 급감 및 타겟 정확도 저하.
+                                </p>
+                            </div>
+                            <div class="p-4 bg-emerald-950/40 border border-emerald-500/30 rounded-xl">
+                                <div class="text-naver font-bold text-xs flex items-center gap-1.5 mb-1">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4"></i> GFA 해법
+                                </div>
+                                <p class="text-[11px] text-slate-200">
+                                    네이버 <strong>First-Party 검색·쇼핑 Intent 데이터</strong>로 규제 영향 없는 미세 타겟팅
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Crisis 3 -->
+                        <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-4">
+                                    <i data-lucide="search" class="w-5 h-5"></i>
+                                </div>
+                                <span class="text-[11px] font-bold text-indigo-400 uppercase tracking-wider">CRISIS 03</span>
+                                <h3 class="text-lg font-bold text-white mt-1 mb-2">검색광고(SA) 입찰 포화</h3>
+                                <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                                    주요 키워드 검색량 정체 속 입찰가만 상승, 단순 검색광고 단독으로는 볼륨 확장 정체.
+                                </p>
+                            </div>
+                            <div class="p-4 bg-emerald-950/40 border border-emerald-500/30 rounded-xl">
+                                <div class="text-naver font-bold text-xs flex items-center gap-1.5 mb-1">
+                                    <i data-lucide="check-circle-2" class="w-4 h-4"></i> GFA 해법
+                                </div>
+                                <p class="text-[11px] text-slate-200">
+                                    GFA로 잠재 수요를 창출하여 <strong>자사 브랜드 키워드 검색량(SA) 동시 폭증</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Table mini -->
+                    <div class="bg-slate-800/50 border border-slate-700/80 rounded-2xl overflow-hidden text-xs">
+                        <table class="w-full text-left">
+                            <thead class="bg-slate-800 text-slate-400 border-b border-slate-700">
+                                <tr>
+                                    <th class="p-3">비교 항목</th>
+                                    <th class="p-3">글로벌 SNS DA</th>
+                                    <th class="p-3">기존 검색광고(SA)</th>
+                                    <th class="p-3 text-naver font-bold">네이버 GFA 성과형 DA</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-700/50 text-slate-300">
+                                <tr>
+                                    <td class="p-3 font-semibold text-white">타겟팅 기반</td>
+                                    <td class="p-3">단순 관심사 / 3rd 픽셀</td>
+                                    <td class="p-3">키워드 검색자 한정</td>
+                                    <td class="p-3 text-naver font-bold">실제 검색어 + 쇼핑구매 First-party Intent</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-semibold text-white">모수 확장성</td>
+                                    <td class="p-3">보통 (피로도 급증)</td>
+                                    <td class="p-3">낮음 (검색량 한계)</td>
+                                    <td class="p-3 text-naver font-bold">압도적 (일 3,000만+ 트래픽 풀)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: Why Naver GFA 4 Core Strengths -->
+            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-darknavy">
+                <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
+                    <div class="text-center sm:text-left">
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">03. CORE ADVANTAGES</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+                            네이버 GFA 4대 핵심 전략 소구점
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative overflow-hidden">
+                            <div class="text-4xl font-black text-slate-700/40 absolute top-4 right-4">01</div>
+                            <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-3">
+                                <i data-lucide="layout-grid" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">국내 최대 프리미엄 독점 지면</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                네이버 메인, 스마트채널, 뉴스, 카페, 웹툰, 홈피드 등 일 3천만 이상이 머무는 핵심 프리미엄 지면에 독점 노출.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">스마트채널</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">모바일 메인판</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">홈피드 DA</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative overflow-hidden">
+                            <div class="text-4xl font-black text-slate-700/40 absolute top-4 right-4">02</div>
+                            <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-3">
+                                <i data-lucide="target" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">의도(Intent) 기반 정밀 타겟팅</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                키워드 검색 이력, 카테고리 쇼핑 구매/장바구니 행동 데이터를 바탕으로 구매 직전 유저에게 적시 도달.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">검색어 의도 타겟</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">쇼핑 카테고리 구매자</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">고객여정 타겟</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative overflow-hidden">
+                            <div class="text-4xl font-black text-slate-700/40 absolute top-4 right-4">03</div>
+                            <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-3">
+                                <i data-lucide="cpu" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">AI 머신러닝 (ADVoost 솔루션)</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                상품 DB 카탈로그 연동으로 실시간 최적 소재를 AI가 자동 조합하고, 머신러닝 입찰로 CVR/ROAS 자동 최적화.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">ADVoost 쇼핑 캠페인</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">다이내믹 카탈로그</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">스마트 입찰</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative overflow-hidden">
+                            <div class="text-4xl font-black text-slate-700/40 absolute top-4 right-4">04</div>
+                            <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-3">
+                                <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">Full-Funnel 통합 마케팅 시너지</h3>
+                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                                GFA 노출 ➔ 브랜드 검색광고(SA) ➔ 네이버페이/스토어로 이어지는 네이버 생태계 완벽 연결.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">브랜드 검색(SA) 연동</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">네이버페이 간편결제</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">간접 전환 추적</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: Full-Funnel Strategy -->
+            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-slate-900">
+                <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
+                    <div class="text-center sm:text-left">
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">04. FUNNEL STRATEGY</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+                            퍼널별 실전 캠페인 세팅 프레임워크
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <!-- TOFU -->
+                        <div class="bg-slate-800/90 border border-emerald-500/40 rounded-2xl p-6 flex flex-col justify-between relative">
+                            <div class="space-y-3">
+                                <div class="inline-flex px-2.5 py-1 rounded-full bg-emerald-500/20 text-naver text-[11px] font-bold">
+                                    TOFU : 인지 & 모수 확장 (30%)
+                                </div>
+                                <h3 class="text-base font-bold text-white">잠재 고객 발굴 & 인지도 확보</h3>
+                                <ul class="text-xs text-slate-300 space-y-2">
+                                    <li class="flex items-start gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-naver mt-0.5 shrink-0"></i>
+                                        <span><strong>타겟:</strong> 연령/성별, 카테고리 관심사, 대형 키워드</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-naver mt-0.5 shrink-0"></i>
+                                        <span><strong>지면:</strong> 네이버 메인판, 뉴스, 웹툰</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-naver mt-0.5 shrink-0"></i>
+                                        <span><strong>소재:</strong> 직관적 혜택 & 후킹형 이미지 배너</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-700 text-xs">
+                                <div class="text-slate-400">목표 CPC: <strong class="text-naver">180원 ~ 250원</strong></div>
+                                <div class="text-slate-400">핵심 KPI: <strong>도달수, CTR, 브랜드검색량</strong></div>
+                            </div>
+                        </div>
+
+                        <!-- MOFU -->
+                        <div class="bg-slate-800/90 border border-blue-500/40 rounded-2xl p-6 flex flex-col justify-between relative">
+                            <div class="space-y-3">
+                                <div class="inline-flex px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-400 text-[11px] font-bold">
+                                    MOFU : 탐색 & 의도 강화 (40%)
+                                </div>
+                                <h3 class="text-base font-bold text-white">고관여 유도 & 장바구니 전환</h3>
+                                <ul class="text-xs text-slate-300 space-y-2">
+                                    <li class="flex items-start gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-blue-400 mt-0.5 shrink-0"></i>
+                                        <span><strong>타겟:</strong> 고객여정 타겟, 쇼핑 검색 Intent</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-blue-400 mt-0.5 shrink-0"></i>
+                                        <span><strong>지면:</strong> 쇼핑판, 카페, 블로그, 스마트채널</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-blue-400 mt-0.5 shrink-0"></i>
+                                        <span><strong>소재:</strong> 다이내믹 카탈로그 피드형 배너</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-700 text-xs">
+                                <div class="text-slate-400">목표 CPC: <strong class="text-blue-400">300원 ~ 400원</strong></div>
+                                <div class="text-slate-400">핵심 KPI: <strong>상세페이지 유입률, 장바구니 수</strong></div>
+                            </div>
+                        </div>
+
+                        <!-- BOFU -->
+                        <div class="bg-slate-800/90 border border-purple-500/40 rounded-2xl p-6 flex flex-col justify-between relative">
+                            <div class="space-y-3">
+                                <div class="inline-flex px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-400 text-[11px] font-bold">
+                                    BOFU : 구매 & ROAS 극대화 (30%)
+                                </div>
+                                <h3 class="text-base font-bold text-white">이탈 재유입 & Direct 전환</h3>
+                                <ul class="text-xs text-slate-300 space-y-2">
+                                    <li class="flex items-start gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 mt-0.5 shrink-0"></i>
+                                        <span><strong>타겟:</strong> 웹/앱 픽셀 리타겟팅, ADVoost AI</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 mt-0.5 shrink-0"></i>
+                                        <span><strong>지면:</strong> 홈피드 DA, ADVoost 자동 배치</span>
+                                    </li>
+                                    <li class="flex items-start gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 mt-0.5 shrink-0"></i>
+                                        <span><strong>소재:</strong> AI 맞춤 추천 & 개인화 카탈로그</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-slate-700 text-xs">
+                                <div class="text-slate-400">목표 CPC: <strong class="text-purple-400">450원 ~ 600원</strong></div>
+                                <div class="text-slate-400">핵심 KPI: <strong>구매 전환율(CVR), Direct ROAS</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: Interactive Simulator -->
+            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-darknavy">
+                <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
+                    <div class="text-center sm:text-left">
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">05. LIVE SIMULATOR</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+                            네이버 GFA 예산 및 실시간 성과 계산기
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                        <!-- Left Controls -->
+                        <div class="lg:col-span-5 bg-slate-800/90 border border-slate-700 rounded-2xl p-6 space-y-5">
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs font-bold text-slate-300">월 희망 예산</label>
+                                    <span id="display-budget" class="text-xl font-black text-naver">1,000만 원</span>
+                                </div>
+                                <input type="range" id="input-budget" min="300" max="5000" step="100" value="1000" class="w-full h-2.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-naver">
+                                <div class="flex justify-between text-[10px] text-slate-400 mt-1">
+                                    <span>300만 원</span>
+                                    <span>2,500만 원</span>
+                                    <span>5,000만 원</span>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-2">
+                                <button onclick="setBudget(500)" class="py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-medium hover:border-naver hover:text-naver transition-colors">500만</button>
+                                <button onclick="setBudget(1000)" class="py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-medium hover:border-naver hover:text-naver transition-colors">1,000만</button>
+                                <button onclick="setBudget(3000)" class="py-1.5 rounded-lg border border-slate-700 bg-slate-800 text-xs font-medium hover:border-naver hover:text-naver transition-colors">3,000만</button>
+                            </div>
+
+                            <div>
+                                <label class="text-xs font-bold text-slate-300 block mb-1.5">업종 카테고리</label>
+                                <select id="select-category" onchange="updateSim()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs font-medium text-slate-200 outline-none focus:border-naver">
+                                    <option value="ecommerce">이커머스 / 생활·패션·뷰티</option>
+                                    <option value="food">식품 / 건강기능식품</option>
+                                    <option value="living">가구 / 인테리어 / 가전</option>
+                                    <option value="service">교육 / 플랫폼 / 서비스</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Right Results -->
+                        <div class="lg:col-span-7 bg-slate-800/90 border border-slate-700 rounded-2xl p-6 space-y-4">
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                                <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-700/60">
+                                    <div class="text-[10px] text-slate-400">예상 총 노출수</div>
+                                    <div id="res-imp" class="text-base sm:text-lg font-bold text-white mt-0.5">2,850,000회</div>
+                                </div>
+                                <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-700/60">
+                                    <div class="text-[10px] text-slate-400">예상 유입(클릭)</div>
+                                    <div id="res-clicks" class="text-base sm:text-lg font-bold text-naver mt-0.5">31,250회</div>
+                                </div>
+                                <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-700/60">
+                                    <div class="text-[10px] text-slate-400">평균 예상 CPC</div>
+                                    <div id="res-cpc" class="text-base sm:text-lg font-bold text-white mt-0.5">320원</div>
+                                </div>
+                                <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-700/60">
+                                    <div class="text-[10px] text-slate-400">기대 통합 ROAS</div>
+                                    <div id="res-roas" class="text-base sm:text-lg font-bold text-emerald-400 mt-0.5">420%</div>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-900/60 rounded-xl border border-slate-700/70 divide-y divide-slate-800 text-xs">
+                                <div class="p-3 flex justify-between items-center">
+                                    <span class="text-slate-300 font-medium">TOFU (30%)</span>
+                                    <div class="text-right">
+                                        <span id="tab-tofu-budget" class="font-bold text-white">300만 원</span>
+                                        <span id="tab-tofu-clicks" class="text-slate-400 text-[11px] block">약 14,000 클릭</span>
+                                    </div>
+                                </div>
+                                <div class="p-3 flex justify-between items-center">
+                                    <span class="text-slate-300 font-medium">MOFU (40%)</span>
+                                    <div class="text-right">
+                                        <span id="tab-mofu-budget" class="font-bold text-white">400만 원</span>
+                                        <span id="tab-mofu-clicks" class="text-slate-400 text-[11px] block">약 11,500 클릭</span>
+                                    </div>
+                                </div>
+                                <div class="p-3 flex justify-between items-center">
+                                    <span class="text-slate-300 font-medium">BOFU (30%)</span>
+                                    <div class="text-right">
+                                        <span id="tab-bofu-budget" class="font-bold text-white">300만 원</span>
+                                        <span id="tab-bofu-clicks" class="text-slate-400 text-[11px] block">약 5,750 클릭</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 bg-gradient-to-r from-naver/20 to-blue-500/20 border border-naver/30 rounded-xl flex items-center justify-between">
+                                <div>
+                                    <div class="text-[11px] text-slate-300">예상 총 매출 창출액 (Direct + 간접 검색)</div>
+                                    <div id="res-revenue" class="text-xl font-black text-naver">약 4,200만 원</div>
+                                </div>
+                                <button onclick="nextSlide()" class="px-4 py-2 rounded-lg bg-naver text-white text-xs font-bold hover:bg-naver-hover transition-all">
+                                    로드맵 확인 ➔
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: Roadmap & Closing FAQ -->
+            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-slate-900">
+                <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
+                    <div class="text-center sm:text-left">
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">06. ROADMAP & FAQ</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+                            추진 로드맵 및 자주 묻는 질문
+                        </h2>
+                    </div>
+
+                    <!-- Roadmap 3 Steps -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5">
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-naver text-[10px] font-bold mb-2">Phase 1 (1~2주차)</span>
+                            <h4 class="text-sm font-bold text-white mb-1.5">인프라 구축 & 소재 A/B</h4>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">네이버 공통 픽셀 및 상품 카탈로그 DB 연동, 1차 후킹/혜택 소재 테스트</p>
+                        </div>
+                        <div class="bg-slate-800/80 border border-naver rounded-xl p-5 shadow-lg shadow-naver/10">
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-naver text-white text-[10px] font-bold mb-2">Phase 2 (3~4주차)</span>
+                            <h4 class="text-sm font-bold text-white mb-1.5">머신러닝 데이터 최적화</h4>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">전환 데이터 축적 및 고효율 지면 예산 집중, 스마트 입찰 모델 전환</p>
+                        </div>
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-5">
+                            <span class="inline-block px-2.5 py-0.5 rounded-full bg-slate-700 text-slate-300 text-[10px] font-bold mb-2">Phase 3 (5주차~)</span>
+                            <h4 class="text-sm font-bold text-white mb-1.5">모수 스케일업 & 풀퍼널</h4>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">BOFU 리타겟팅 확장, SA 브랜드 검색 시너지 극대화 및 ROAS 400%+ 달성</p>
+                        </div>
+                    </div>
+
+                    <!-- Mini FAQ -->
+                    <div class="space-y-2.5 pt-2">
+                        <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4">
+                            <div class="text-xs font-bold text-white mb-1">Q. 스마트스토어가 아닌 자사몰도 ADVoost 활용이 가능한가요?</div>
+                            <div class="text-[11px] text-slate-400 leading-relaxed">네, 카페24, 아임웹 등 독립 자사몰도 네이버 전환 픽셀 및 상품 DB 피드를 연동하여 동일하게 AI 자동 최적화가 가능합니다.</div>
+                        </div>
+                        <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4">
+                            <div class="text-xs font-bold text-white mb-1">Q. Meta 광고 대비 가장 큰 차별점은 무엇인가요?</div>
+                            <div class="text-[11px] text-slate-400 leading-relaxed">Meta가 단순 관심사 노출이라면, GFA는 실제 검색어 입력 및 쇼핑 이력이라는 독점 First-Party Intent 데이터를 사용하여 전환 구매율이 높습니다.</div>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-3">
+                        <div class="text-xs text-slate-400 mb-2">지금 네이버 GFA로 퍼포먼스 마케팅의 새로운 성장을 시작하십시오.</div>
+                        <button onclick="goToSlide(0)" class="px-6 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:text-white text-xs font-bold transition-all">
+                            처음으로 돌아가기 (Slide 1)
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Bottom Progress Bar & Pagination Dots -->
+    <footer class="fixed bottom-0 left-0 right-0 z-50 glass-nav border-t border-slate-800/80 px-6 py-3 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+            <button onclick="goToSlide(0)" class="dot-indicator w-2.5 h-2.5 rounded-full bg-naver transition-all" data-slide="0"></button>
+            <button onclick="goToSlide(1)" class="dot-indicator w-2.5 h-2.5 rounded-full bg-slate-700 transition-all" data-slide="1"></button>
+            <button onclick="goToSlide(2)" class="dot-indicator w-2.5 h-2.5 rounded-full bg-slate-700 transition-all" data-slide="2"></button>
+            <button onclick="goToSlide(3)" class="dot-indicator w-2.5 h-2.5 rounded-full bg-slate-700 transition-all" data-slide="3"></button>
+            <button onclick="goToSlide(4)" class="dot-indicator w-2.5 h-2.5 rounded-full bg-slate-700 transition-all" data-slide="4"></button>
+            <button onclick="goToSlide(5)" class="dot-indicator w-2.5 h-2.5 rounded-full bg-slate-700 transition-all" data-slide="5"></button>
+        </div>
+
+        <div class="text-[11px] text-slate-400 hidden sm:block">
+            키보드 좌우 방향키 ( <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">←</kbd> <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">→</kbd> ) 또는 화면 좌우 버튼으로 이동 가능합니다
+        </div>
+
+        <!-- Progress bar line -->
+        <div class="w-24 sm:w-36 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+            <div id="progress-line" class="h-full bg-naver transition-all duration-500 w-[16.66%]"></div>
+        </div>
+    </footer>
+
+    <!-- Slider & Simulator Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        let currentSlide = 0;
+        const totalSlides = 6;
+        const sliderTrack = document.getElementById('slider-track');
+        const slideIndicator = document.getElementById('slide-indicator');
+        const progressLine = document.getElementById('progress-line');
+        const headerPrev = document.getElementById('header-prev');
+        const headerNext = document.getElementById('header-next');
+        const sidePrev = document.getElementById('side-prev');
+        const sideNext = document.getElementById('side-next');
+
+        function updateSlideUI() {
+            // Transform horizontal track
+            sliderTrack.style.transform = `translateX(-${currentSlide * 100}vw)`;
+
+            // Update Counter
+            const padCurrent = String(currentSlide + 1).padStart(2, '0');
+            const padTotal = String(totalSlides).padStart(2, '0');
+            slideIndicator.innerText = `${padCurrent} / ${padTotal}`;
+
+            // Update Progress Line
+            const progressPercent = ((currentSlide + 1) / totalSlides) * 100;
+            progressLine.style.width = `${progressPercent}%`;
+
+            // Update Nav Pills
+            document.querySelectorAll('.nav-pill').forEach((pill, idx) => {
+                if (idx === currentSlide) {
+                    pill.className = 'nav-pill px-3 py-1.5 rounded-full transition-all bg-slate-800 text-naver font-bold border border-slate-700';
+                } else {
+                    pill.className = 'nav-pill px-3 py-1.5 rounded-full transition-all hover:bg-slate-800 text-slate-400';
+                }
+            });
+
+            // Update Dots
+            document.querySelectorAll('.dot-indicator').forEach((dot, idx) => {
+                if (idx === currentSlide) {
+                    dot.className = 'dot-indicator w-6 h-2.5 rounded-full bg-naver transition-all';
+                } else {
+                    dot.className = 'dot-indicator w-2.5 h-2.5 rounded-full bg-slate-700 hover:bg-slate-600 transition-all';
+                }
+            });
+
+            // Update Button states
+            headerPrev.disabled = currentSlide === 0;
+            if (sidePrev) sidePrev.disabled = currentSlide === 0;
+            if (sideNext) sideNext.style.display = currentSlide === totalSlides - 1 ? 'none' : 'flex';
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                updateSlideUI();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlideUI();
+            }
+        }
+
+        function goToSlide(index) {
+            if (index >= 0 && index < totalSlides) {
+                currentSlide = index;
+                updateSlideUI();
+            }
+        }
+
+        // Keyboard Controls
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
+        // Touch Swipe Handling for Mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        window.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        window.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleGesture();
+        }, { passive: true });
+
+        function handleGesture() {
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                prevSlide();
+            }
+        }
+
+        // Simulator Logic
+        const inputBudget = document.getElementById('input-budget');
+        const displayBudget = document.getElementById('display-budget');
+        const selectCategory = document.getElementById('select-category');
+
+        const resImp = document.getElementById('res-imp');
+        const resClicks = document.getElementById('res-clicks');
+        const resCpc = document.getElementById('res-cpc');
+        const resRoas = document.getElementById('res-roas');
+        const resRevenue = document.getElementById('res-revenue');
+
+        const tabTofuBudget = document.getElementById('tab-tofu-budget');
+        const tabTofuClicks = document.getElementById('tab-tofu-clicks');
+        const tabMofuBudget = document.getElementById('tab-mofu-budget');
+        const tabMofuClicks = document.getElementById('tab-mofu-clicks');
+        const tabBofuBudget = document.getElementById('tab-bofu-budget');
+        const tabBofuClicks = document.getElementById('tab-bofu-clicks');
+
+        const categoryMultipliers = {
+            ecommerce: { cpc: 320, roas: 420, cpm: 3500 },
+            food: { cpc: 280, roas: 450, cpm: 3200 },
+            living: { cpc: 380, roas: 390, cpm: 4000 },
+            service: { cpc: 350, roas: 360, cpm: 3800 }
+        };
+
+        function setBudget(val) {
+            inputBudget.value = val;
+            updateSim();
+        }
+
+        function updateSim() {
+            const budgetVal = parseInt(inputBudget.value, 10);
+            displayBudget.innerText = budgetVal.toLocaleString() + '만 원';
+
+            const cat = selectCategory.value;
+            const mult = categoryMultipliers[cat] || categoryMultipliers.ecommerce;
+
+            const totalWon = budgetVal * 10000;
+            const tofuWon = totalWon * 0.30;
+            const mofuWon = totalWon * 0.40;
+            const bofuWon = totalWon * 0.30;
+
+            const tofuCpc = Math.round(mult.cpc * 0.65);
+            const mofuCpc = Math.round(mult.cpc * 1.05);
+            const bofuCpc = Math.round(mult.cpc * 1.60);
+
+            const tofuClicks = Math.round(tofuWon / tofuCpc);
+            const mofuClicks = Math.round(mofuWon / mofuCpc);
+            const bofuClicks = Math.round(bofuWon / bofuCpc);
+            const totalClicks = tofuClicks + mofuClicks + bofuClicks;
+
+            const avgCpc = Math.round(totalWon / totalClicks);
+            const estimatedImp = Math.round((totalWon / mult.cpm) * 1000);
+            const expectedRoas = mult.roas;
+            const expectedRev = Math.round(totalWon * (expectedRoas / 100));
+
+            resImp.innerText = estimatedImp.toLocaleString() + '회';
+            resClicks.innerText = totalClicks.toLocaleString() + '회';
+            resCpc.innerText = avgCpc.toLocaleString() + '원';
+            resRoas.innerText = expectedRoas + '%';
+            resRevenue.innerText = '약 ' + Math.round(expectedRev / 10000).toLocaleString() + '만 원';
+
+            tabTofuBudget.innerText = Math.round(tofuWon / 10000).toLocaleString() + '만 원';
+            tabTofuClicks.innerText = '약 ' + tofuClicks.toLocaleString() + ' 클릭 (CPC ' + tofuCpc + '원)';
+
+            tabMofuBudget.innerText = Math.round(mofuWon / 10000).toLocaleString() + '만 원';
+            tabMofuClicks.innerText = '약 ' + mofuClicks.toLocaleString() + ' 클릭 (CPC ' + mofuCpc + '원)';
+
+            tabBofuBudget.innerText = Math.round(bofuWon / 10000).toLocaleString() + '만 원';
+            tabBofuClicks.innerText = '약 ' + bofuClicks.toLocaleString() + ' 클릭 (CPC ' + bofuCpc + '원)';
+        }
+
+        inputBudget.addEventListener('input', updateSim);
+        updateSim();
+        updateSlideUI();
+    </script>
+</body>
+</html>
