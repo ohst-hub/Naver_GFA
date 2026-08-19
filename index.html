@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>네이버 GFA 성과형 광고 제안서 | AI 맞춤형 매출 성장 전략</title>
+    <title>네이버 GFA 성과형 광고 전략 제안서 | NAVER GFA Performance Proposal</title>
     
     <!-- Pretendard Font -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
@@ -73,25 +73,25 @@
                 N
             </div>
             <div>
-                <span class="text-white font-bold text-sm sm:text-base tracking-tight block">네이버 GFA 광고 제안서</span>
+                <span class="text-white font-bold text-sm sm:text-base tracking-tight block">네이버 GFA 통합 제안서</span>
             </div>
         </div>
 
-        <!-- Slide Jump Pills (10 Pages) -->
-        <nav class="hidden lg:flex items-center space-x-1.5 text-xs font-medium text-slate-400">
-            <button onclick="goToSlide(0)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all bg-slate-800 text-naver font-bold border border-slate-700" data-slide="0">01. 시작</button>
-            <button onclick="goToSlide(1)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="1">02. 광고의 어려움</button>
-            <button onclick="goToSlide(2)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="2">03. 기존의 한계</button>
-            <button onclick="goToSlide(3)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="3">04. 말로 찾는 고객</button>
-            <button onclick="goToSlide(4)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="4">05. 알아서 찾는 AI</button>
-            <button onclick="goToSlide(5)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="5">06. 입증된 성과</button>
-            <button onclick="goToSlide(6)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="6">07. 구매 연결 구조</button>
-            <button onclick="goToSlide(7)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="7">08. 예상 매출 계산</button>
-            <button onclick="goToSlide(8)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="8">09. 실전 운영 팁</button>
-            <button onclick="goToSlide(9)" class="nav-pill px-2.5 py-1 rounded-full hover:text-white transition-all hover:bg-slate-800" data-slide="9">10. 8주 성장 사례</button>
+        <!-- Slide Jump Navigation Pills (10 Slides) -->
+        <nav class="hidden lg:flex items-center space-x-1 text-xs font-medium text-slate-400">
+            <button onclick="goToSlide(0)" class="nav-pill px-2.5 py-1 rounded-full transition-all bg-slate-800 text-naver font-bold border border-slate-700" data-slide="0">01. 시작</button>
+            <button onclick="goToSlide(1)" class="nav-pill px-2.5 py-1 rounded-full transition-all hover:bg-slate-800" data-slide="1">02. 시장의 어려움</button>
+            <button onclick="goToSlide(2)" class="nav-pill px-2.5 py-1 rounded-full transition-all hover:bg-slate-800" data-slide="2">03. GFA 강점</button>
+            <button onclick="goToSlide(3)" class="nav-pill px-2.5 py-1 rounded-full transition-all hover:bg-slate-800" data-slide="3">04. ADVoost AI</button>
+            <button onclick="goToSlide(4)" class="nav-pill px-2.5 py-1 rounded-full transition-all hover:bg-slate-800" data-slide="4">05. UTA 자연어 타겟</button>
+            <button onclick="goToSlide(5)" class="nav-pill px-2.5 py-1 rounded-full transition-all hover:bg-slate-800" data-slide="5">06. 풀퍼널 구조</button>
+            <button onclick="goToSlide(6)" class="nav-pill px-2.5 py-1 rounded-full transition-all hover:bg-slate-800" data-slide="6">07. 집행 전략</button>
+            <button onclick="goToSlide(7)" class="nav-pill px-2.5 py-1 rounded-full transition-all hover:bg-slate-800" data-slide="7">08. 예상 매출 계산</button>
+            <button onclick="goToSlide(8)" class="nav-pill px-2.5 py-1 rounded-full transition-all hover:bg-slate-800" data-slide="8">09. 실전 운영 팁</button>
+            <button onclick="goToSlide(9)" class="nav-pill px-2.5 py-1 rounded-full transition-all hover:bg-slate-800" data-slide="9">10. 8주 성장 사례</button>
         </nav>
 
-        <!-- Slide Counter & Navigation Buttons -->
+        <!-- Slide Counter & Control Buttons -->
         <div class="flex items-center space-x-4">
             <span id="slide-indicator" class="text-xs font-bold tracking-widest text-naver bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
                 01 / 10
@@ -115,11 +115,11 @@
         <i data-lucide="chevron-right" class="w-6 h-6"></i>
     </button>
 
-    <!-- Main Horizontal Slider Track -->
+    <!-- Main Horizontal Slider Viewport -->
     <main class="w-full h-full overflow-hidden">
         <div id="slider-track" class="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
 
-            <!-- SLIDE 1: 표지 -->
+            <!-- SLIDE 1: 표지 (개요) -->
             <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 relative overflow-hidden bg-darknavy">
                 <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#03C75A_1px,transparent_1px)] [background-size:28px_28px]"></div>
                 <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-naver/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -127,53 +127,53 @@
                 <div class="max-w-5xl w-full mx-auto text-center space-y-6 relative z-10 slide-content-scroll max-h-[85vh] overflow-y-auto py-4">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 text-xs font-semibold text-naver">
                         <span class="w-2 h-2 rounded-full bg-naver animate-ping"></span>
-                        네이버 AI 기반 실전 매출 성장 제안서
+                        네이버 GFA 성과형 디스플레이 광고 제안서
                     </div>
                     
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
-                        말로 설명하면 알아서 찾아오는<br>
-                        <span class="gradient-text">네이버 똑똑한 손님 맞춤 광고</span>
+                        왜 지금, 모든 브랜드에게<br>
+                        <span class="gradient-text">네이버 GFA가 필수적인가?</span>
                     </h1>
 
                     <p class="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
-                        복잡한 설정 없이, "어떤 손님이 필요한지" 말로 적기만 하면<br class="hidden sm:inline">
-                        네이버 AI가 진짜 구매할 새로운 손님을 찾아 매출을 올려드립니다.
+                        광고비 상승과 고객 유치 한계를 돌파하는 확실한 해답.<br class="hidden sm:inline">
+                        대한민국 1위 <strong class="text-white">독점 프리미엄 트래픽</strong>과 <strong class="text-white">구매 의도 기반 맞춤 타겟팅</strong>으로 만드는 실전 매출 성장 전략
                     </p>
 
                     <!-- Key Stat Badges -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-2">
                         <div class="bg-slate-800/70 border border-slate-700/80 rounded-2xl p-4 backdrop-blur-md">
-                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">70%</div>
-                            <div class="text-xs sm:text-sm font-bold text-white">완전 새로운 손님</div>
-                            <div class="text-[11px] text-slate-400 mt-1">기존 광고가 못 찾던 유저</div>
+                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">3,000만+</div>
+                            <div class="text-xs sm:text-sm font-bold text-white">일간 순 방문자</div>
+                            <div class="text-[11px] text-slate-400 mt-1">국내 최대 프리미엄 지면</div>
                         </div>
                         <div class="bg-slate-800/70 border border-slate-700/80 rounded-2xl p-4 backdrop-blur-md">
-                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">2.7배 ↑</div>
-                            <div class="text-xs sm:text-sm font-bold text-white">광고비 대비 매출 증가</div>
-                            <div class="text-[11px] text-slate-400 mt-1">수익률 129% ➔ 350%</div>
+                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">구매 의도</div>
+                            <div class="text-xs sm:text-sm font-bold text-white">실제 검색·쇼핑 데이터</div>
+                            <div class="text-[11px] text-slate-400 mt-1">진짜 살 사람에게만 노출</div>
                         </div>
                         <div class="bg-slate-800/70 border border-slate-700/80 rounded-2xl p-4 backdrop-blur-md">
-                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">7가지 행동</div>
-                            <div class="text-xs sm:text-sm font-bold text-white">진짜 관심사 분석</div>
-                            <div class="text-[11px] text-slate-400 mt-1">검색·쇼핑·장바구니·결제</div>
+                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">AI 자동화</div>
+                            <div class="text-xs sm:text-sm font-bold text-white">ADVoost 스마트 입찰</div>
+                            <div class="text-[11px] text-slate-400 mt-1">실시간 구매율 자동 최적화</div>
                         </div>
                         <div class="bg-slate-800/70 border border-slate-700/80 rounded-2xl p-4 backdrop-blur-md">
-                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">비용 61% 절감</div>
-                            <div class="text-xs sm:text-sm font-bold text-white">손님 1명 데려오는 비용</div>
-                            <div class="text-[11px] text-slate-400 mt-1">AI가 낭비 없이 예산 사용</div>
+                            <div class="text-naver text-2xl sm:text-3xl font-black mb-1">350%~500%+</div>
+                            <div class="text-xs sm:text-sm font-bold text-white">광고비 대비 매출 목표</div>
+                            <div class="text-[11px] text-slate-400 mt-1">GFA 노출 ➔ 검색 ➔ 결제 연동</div>
                         </div>
                     </div>
 
                     <div class="pt-2">
                         <button onclick="nextSlide()" class="px-8 py-3.5 rounded-xl bg-naver text-white font-bold hover:bg-naver-hover transition-all shadow-xl shadow-naver/30 inline-flex items-center gap-2 text-sm sm:text-base">
-                            제안서 넘겨보기 (다음 페이지)
+                            제안서 시작하기 (다음 페이지)
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </button>
                     </div>
                 </div>
             </section>
 
-            <!-- SLIDE 2: 시장의 어려움 -->
+            <!-- SLIDE 2: 시장의 어려움 (3대 위기) -->
             <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-slate-900">
                 <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
                     <div>
@@ -181,7 +181,7 @@
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
                             광고비는 계속 나가는데, 왜 신규 손님은 줄어들까요?
                         </h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-1">요즘 모든 쇼핑몰과 브랜드가 겪고 있는 3가지 현실적인 이유입니다.</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">기존 SNS 광고와 단순 키워드 광고에 의존하던 방식이 부딪힌 3가지 현실적인 벽입니다.</p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -190,14 +190,14 @@
                                 <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center mb-4">
                                     <i data-lucide="trending-up" class="w-5 h-5"></i>
                                 </div>
-                                <span class="text-[11px] font-bold text-rose-400 uppercase tracking-wider">이유 01</span>
+                                <span class="text-[11px] font-bold text-rose-400 uppercase tracking-wider">문제점 01</span>
                                 <h3 class="text-lg font-bold text-white mt-1 mb-2">손님 1명 데려오는 비용 급증</h3>
                                 <p class="text-slate-300 text-xs leading-relaxed">
-                                    SNS 광고를 하는 업체들이 너무 많아져서, 광고를 한 번 보여주는 단가 자체가 크게 올랐습니다. 예전과 똑같은 돈을 써도 들어오는 손님 수는 확 줄었습니다.
+                                    SNS 광고를 하는 업체들이 너무 많아져서 광고 노출 단가가 치솟았습니다. 예전과 똑같은 돈을 써도 쇼핑몰로 들어오는 손님 수가 확 줄었습니다.
                                 </p>
                             </div>
                             <div class="mt-4 pt-3 border-t border-slate-700 text-xs text-rose-300 font-medium">
-                                ➔ 광고비 부담은 커지고 마진은 감소
+                                ➔ 광고비 부담은 커지고 이익률은 감소
                             </div>
                         </div>
 
@@ -206,14 +206,14 @@
                                 <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4">
                                     <i data-lucide="shield-alert" class="w-5 h-5"></i>
                                 </div>
-                                <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">이유 02</span>
+                                <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">문제점 02</span>
                                 <h3 class="text-lg font-bold text-white mt-1 mb-2">따라다니는 광고(리타겟팅)의 한계</h3>
                                 <p class="text-slate-300 text-xs leading-relaxed">
-                                    스마트폰 보안 정책 때문에 내 사이트에 왔던 사람을 쫓아다니며 보여주던 광고가 잘 작동하지 않습니다. 매번 들어오던 소수의 손님에게만 갇혀버렸습니다.
+                                    스마트폰 개인정보 보호 강화로 내 사이트에 왔던 사람을 쫓아다니며 보여주던 광고의 효과가 떨어졌습니다. 보던 사람만 계속 보는 정체가 발생합니다.
                                 </p>
                             </div>
                             <div class="mt-4 pt-3 border-t border-slate-700 text-xs text-amber-300 font-medium">
-                                ➔ 새로운 손님이 들어오지 않고 정체됨
+                                ➔ 새로운 손님이 들어오지 않고 성장이 멈춤
                             </div>
                         </div>
 
@@ -222,153 +222,108 @@
                                 <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-4">
                                     <i data-lucide="search" class="w-5 h-5"></i>
                                 </div>
-                                <span class="text-[11px] font-bold text-indigo-400 uppercase tracking-wider">이유 03</span>
-                                <h3 class="text-lg font-bold text-white mt-1 mb-2">검색어 광고 경쟁 과열</h3>
+                                <span class="text-[11px] font-bold text-indigo-400 uppercase tracking-wider">문제점 03</span>
+                                <h3 class="text-lg font-bold text-white mt-1 mb-2">검색어 광고(키워드) 경쟁 과열</h3>
                                 <p class="text-slate-300 text-xs leading-relaxed">
-                                    포털에서 특정 단어를 검색하는 사람 수는 정해져 있는데, 1등 자리를 차지하려는 클릭당 입찰가만 계속 오르고 있어 검색광고만으로는 성장이 어렵습니다.
+                                    포털에서 검색하는 사람 수는 정해져 있는데, 1등 자리를 차지하려는 클릭당 입찰가만 계속 오르고 있어 검색광고만으로는 성장의 한계가 있습니다.
                                 </p>
                             </div>
                             <div class="mt-4 pt-3 border-t border-slate-700 text-xs text-indigo-300 font-medium">
-                                ➔ 검색하기 전 단계에서 손님을 유입시켜야 함
+                                ➔ 검색하기 전 단계에서 손님을 미리 확보해야 함
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SLIDE 3: 기존 방식의 한계 -->
+            <!-- SLIDE 3: 네이버 GFA 핵심 소구점 -->
             <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-darknavy">
                 <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
                     <div>
-                        <span class="text-naver font-bold text-xs uppercase tracking-wider">03. TARGETING LIMITATION</span>
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">03. WHY NAVER GFA</span>
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
-                            메뉴판에서 고르는 기존 광고는 진짜 살 사람을 못 찾습니다
+                            왜 네이버 GFA가 가장 강력한 해결책일까요?
                         </h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-1">단순히 '30대 여성', '패션 관심' 같은 체크박스 설정이 가진 3가지 벽입니다.</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">대한민국 1위 트래픽과 실제 쇼핑 구매 데이터가 결합된 4대 핵심 강점입니다.</p>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative">
-                            <div class="text-4xl font-black text-slate-700/50 absolute top-4 right-4">01</div>
-                            <div class="w-10 h-10 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-3">
-                                <i data-lucide="users-2" class="w-5 h-5"></i>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative overflow-hidden">
+                            <div class="text-4xl font-black text-slate-700/40 absolute top-4 right-4">01</div>
+                            <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-3">
+                                <i data-lucide="layout-grid" class="w-5 h-5"></i>
                             </div>
-                            <h3 class="text-base font-bold text-white mb-2">보던 사람만 계속 보는 피로감</h3>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                정해진 카테고리 안의 사람들에게만 광고가 계속 돌면서 정작 아직 우리 브랜드를 모르는 진짜 새로운 손님에게는 광고가 닿지 않습니다.
+                            <h3 class="text-lg font-bold text-white mb-2">국내 최대 프리미엄 독점 지면</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                네이버 모바일/PC 메인, 스마트채널, 뉴스, 카페, 웹툰, 홈피드 등 매일 3천만 명 이상이 이용하는 핵심 명당자리에 독점 노출됩니다.
                             </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">스마트채널</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">모바일 메인판</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">홈피드 DA</span>
+                            </div>
                         </div>
 
-                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative">
-                            <div class="text-4xl font-black text-slate-700/50 absolute top-4 right-4">02</div>
-                            <div class="w-10 h-10 rounded-xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center mb-3">
-                                <i data-lucide="message-square-off" class="w-5 h-5"></i>
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative overflow-hidden">
+                            <div class="text-4xl font-black text-slate-700/40 absolute top-4 right-4">02</div>
+                            <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-3">
+                                <i data-lucide="target" class="w-5 h-5"></i>
                             </div>
-                            <h3 class="text-base font-bold text-white mb-2">진짜 살 사람을 표현하기 어려움</h3>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                <em>"이사나 결혼을 앞두고 실속형 가구를 찾는 사람"</em>처럼 실제 살 것 같은 고객은 머릿속에 있는데, 기존의 딱딱한 체크박스로는 이런 사람을 지정할 수 없습니다.
+                            <h3 class="text-lg font-bold text-white mb-2">진짜 살 사람을 찾는 '구매 의도' 타겟팅</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                겉으로 보이는 단순 나이가 아니라, 실제 검색어 입력 기록과 쇼핑 구매 이력, 장바구니 데이터를 기반으로 구매 직전의 손님에게 적시 도달합니다.
                             </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">검색어 의도 타겟</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">쇼핑 카테고리 구매자</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">고객여정 타겟</span>
+                            </div>
                         </div>
 
-                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative">
-                            <div class="text-4xl font-black text-slate-700/50 absolute top-4 right-4">03</div>
-                            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-3">
-                                <i data-lucide="sliders" class="w-5 h-5"></i>
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative overflow-hidden">
+                            <div class="text-4xl font-black text-slate-700/40 absolute top-4 right-4">03</div>
+                            <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-3">
+                                <i data-lucide="cpu" class="w-5 h-5"></i>
                             </div>
-                            <h3 class="text-base font-bold text-white mb-2">세팅할 때마다 손이 너무 많이 감</h3>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                광고 하나 만들 때마다 수십 개의 관심사, 연령, 지역을 일일이 고르고 조합하느라 매번 시간이 오래 걸리고 복잡합니다.
+                            <h3 class="text-lg font-bold text-white mb-2">AI 자동 최적화 (ADVoost & 카탈로그)</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                상품 DB를 연동하면 AI가 손님 취향에 맞는 상품 이미지를 실시간 조합하고, 구매 확률이 가장 높은 곳에 광고비를 집중 투입합니다.
                             </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">다이내믹 카탈로그</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">스마트 자동 입찰</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">실시간 성과 최적화</span>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Comparison Banner -->
-                    <div class="p-5 bg-gradient-to-r from-slate-800 to-slate-850 border border-slate-700 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <div class="flex items-center gap-3">
-                            <span class="px-3 py-1 bg-red-500/20 text-red-300 rounded-lg text-xs font-bold shrink-0">과거 방식</span>
-                            <span class="text-xs text-slate-300">메뉴판에서 체크하기 [가전제품 관심] + [냉장고 구매의도]</span>
-                        </div>
-                        <i data-lucide="arrow-right" class="w-5 h-5 text-naver hidden sm:block"></i>
-                        <div class="flex items-center gap-3">
-                            <span class="px-3 py-1 bg-naver/20 text-naver rounded-lg text-xs font-bold shrink-0">네이버 AI 방식</span>
-                            <span class="text-xs text-white font-semibold">"신혼이나 이사를 앞둔 알뜰한 손님을 찾아줘" (말로 적으면 끝!)</span>
+                        <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 relative overflow-hidden">
+                            <div class="text-4xl font-black text-slate-700/40 absolute top-4 right-4">04</div>
+                            <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-3">
+                                <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2">네이버 쇼핑·검색광고와의 완벽한 시너지</h3>
+                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                                GFA를 통해 브랜드를 본 손님들이 네이버에서 브랜드를 검색(SA)하게 만들고, 네이버페이 간편결제로 막힘없이 구매를 완성합니다.
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">브랜드 검색량 폭증</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">네이버페이 간편결제</span>
+                                <span class="px-2 py-0.5 rounded bg-slate-700 text-[10px] text-slate-300">간접 매출 동반 상승</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SLIDE 4: 해결책 1 - 말로 찾는 타겟팅 (UTA) -->
+            <!-- SLIDE 4: ADVoost 오디언스 자동 최적화 -->
             <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-slate-900">
                 <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
                     <div>
-                        <span class="text-naver font-bold text-xs uppercase tracking-wider">04. NATURAL LANGUAGE AI</span>
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">04. ADVoost AI AUDIENCE</span>
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
-                            원하는 고객을 말로 설명하면 AI가 찾아냅니다
+                            작은 힌트만 주면 AI가 구매자를 알아서 넓혀주는 'ADVoost 오디언스'
                         </h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-1">평소 쓰는 쉬운 문장으로 적으면, 네이버 AI가 7가지 실제 행동을 분석해 딱 맞는 손님을 모아줍니다.</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                        <div class="lg:col-span-7 space-y-4">
-                            <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 space-y-3">
-                                <div class="text-xs font-bold text-naver uppercase flex items-center gap-1.5">
-                                    <i data-lucide="sparkles" class="w-4 h-4"></i> 실제 입력 예시
-                                </div>
-                                <div class="p-3.5 bg-slate-900 rounded-xl border border-slate-700/80 text-sm font-medium text-slate-100">
-                                    "달리기, 헬스, 수영 같은 운동을 자주 하고 음악을 즐겨 들어서 무선 이어폰이 필요한 3040 여성 손님 찾아줘."
-                                </div>
-                                <div class="text-xs text-slate-300 leading-relaxed">
-                                    이렇게 적기만 하면, AI가 네이버 전체 이용자 중에서 해당 취향과 행동을 가진 사람들을 정밀하게 뽑아 광고를 보여줍니다.
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-3 gap-3 text-center">
-                                <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
-                                    <div class="text-xs text-slate-400 font-medium">연령/성별 자동 분석</div>
-                                    <div class="text-sm font-bold text-white mt-1">30~40대 여성 100%</div>
-                                </div>
-                                <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
-                                    <div class="text-xs text-slate-400 font-medium">행동 패턴 일치</div>
-                                    <div class="text-sm font-bold text-naver mt-1">운동 + 음향기기 관심</div>
-                                </div>
-                                <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
-                                    <div class="text-xs text-slate-400 font-medium">실제 구매 성향</div>
-                                    <div class="text-sm font-bold text-white mt-1">쇼핑 클릭 및 결제</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="lg:col-span-5 bg-slate-800/90 border border-naver/40 rounded-2xl p-6 space-y-4">
-                            <div class="text-sm font-bold text-white flex items-center justify-between">
-                                <span>네이버의 7가지 진짜 행동 분석</span>
-                                <span class="px-2 py-0.5 rounded bg-naver text-darknavy text-xs font-black">정확도 1위</span>
-                            </div>
-                            <p class="text-xs text-slate-300 leading-relaxed">
-                                겉으로 보이는 단순 나이가 아니라, <strong>네이버에서 실제 활동한 7가지 기록</strong>을 바탕으로 분석합니다.
-                            </p>
-                            <div class="grid grid-cols-2 gap-2 text-xs">
-                                <div class="p-2.5 bg-slate-900/90 rounded-lg border border-slate-700 text-slate-200">① 네이버 검색 기록</div>
-                                <div class="p-2.5 bg-slate-900/90 rounded-lg border border-slate-700 text-slate-200">② 상품 둘러본 기록</div>
-                                <div class="p-2.5 bg-slate-900/90 rounded-lg border border-slate-700 text-slate-200">③ 장바구니 담은 기록</div>
-                                <div class="p-2.5 bg-slate-900/90 rounded-lg border border-slate-700 text-slate-200">④ 실제 구매/결제 기록</div>
-                                <div class="p-2.5 bg-slate-900/90 rounded-lg border border-slate-700 text-slate-200">⑤ 블로그 글 읽은 기록</div>
-                                <div class="p-2.5 bg-slate-900/90 rounded-lg border border-slate-700 text-slate-200">⑥ 카페 커뮤니티 활동</div>
-                                <div class="p-2.5 bg-slate-900/90 rounded-lg border border-slate-700 text-slate-200 col-span-2 text-center text-naver font-bold">⑦ 최근 1달간 광고 반응 데이터 분석</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SLIDE 5: 해결책 2 - 알아서 찾아주는 AI (ADVoost) -->
-            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-darknavy">
-                <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
-                    <div>
-                        <span class="text-naver font-bold text-xs uppercase tracking-wider">05. AI AUTO EXPANSION</span>
-                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
-                            작은 힌트만 주면 AI가 구매자를 알아서 넓혀줍니다
-                        </h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-1">기본적인 고객 힌트(시그널)만 주면, AI가 실시간으로 학습하며 구매 가능성이 높은 사람을 자동 탐색합니다.</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">기본 고객 힌트(시그널)만 등록해두면, AI가 실시간으로 학습하며 구매 확률이 높은 사람에게 자동으로 광고를 넓힙니다.</p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -377,14 +332,14 @@
                                 <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-4">
                                     <i data-lucide="maximize-2" class="w-5 h-5"></i>
                                 </div>
-                                <span class="text-xs font-bold text-naver uppercase">장점 01</span>
-                                <h3 class="text-lg font-bold text-white mt-1 mb-2">고객 자동 확장</h3>
+                                <span class="text-xs font-bold text-naver uppercase">특징 01</span>
+                                <h3 class="text-lg font-bold text-white mt-1 mb-2">알짜 고객 자동 확장</h3>
                                 <p class="text-slate-300 text-xs leading-relaxed">
-                                    처음에 좁은 조건을 넣어도, AI가 <em>"이 사람들도 우리 물건을 살 확률이 아주 높네?"</em>라고 스스로 판단하여 숨어있던 알짜 고객에게까지 광고를 넓혀줍니다.
+                                    처음에 좁은 조건을 넣어도, AI가 <em>"이 사람들도 우리 상품을 살 확률이 아주 높네?"</em>라고 스스로 판단하여 숨어있던 가망 고객에게까지 광고를 넓혀줍니다.
                                 </p>
                             </div>
                             <div class="mt-4 pt-3 border-t border-slate-700 text-[11px] text-slate-400">
-                                ➔ 광고가 막히지 않고 꾸준히 손님 유입
+                                ➔ 광고가 막히지 않고 꾸준히 새로운 손님 유입
                             </div>
                         </div>
 
@@ -393,14 +348,14 @@
                                 <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-4">
                                     <i data-lucide="zap" class="w-5 h-5"></i>
                                 </div>
-                                <span class="text-xs font-bold text-naver uppercase">장점 02</span>
-                                <h3 class="text-lg font-bold text-white mt-1 mb-2">간단한 3분 세팅</h3>
+                                <span class="text-xs font-bold text-naver uppercase">특징 02</span>
+                                <h3 class="text-lg font-bold text-white mt-1 mb-2">간단한 세팅</h3>
                                 <p class="text-slate-300 text-xs leading-relaxed">
-                                    복잡한 규칙을 일일이 만들 필요가 없습니다. 브랜드가 생각하는 기본 고객층을 힌트로 등록해두면 나머지 세부 타겟팅은 AI가 알아서 진행합니다.
+                                    복잡한 세부 규칙을 고민할 필요 없이, 브랜드가 생각하는 기본 고객층을 <strong>시그널(Signal)</strong>로 등록해두면 나머지 세부 최적화는 AI가 알아서 진행합니다.
                                 </p>
                             </div>
                             <div class="mt-4 pt-3 border-t border-slate-700 text-[11px] text-slate-400">
-                                ➔ 광고 운영 시간과 번거로움 대폭 절감
+                                ➔ 광고 세팅 시간 및 운영 공수 대폭 절감
                             </div>
                         </div>
 
@@ -409,103 +364,90 @@
                                 <div class="w-10 h-10 rounded-xl bg-naver/20 text-naver flex items-center justify-center mb-4">
                                     <i data-lucide="refresh-cw" class="w-5 h-5"></i>
                                 </div>
-                                <span class="text-xs font-bold text-naver uppercase">장점 03</span>
-                                <h3 class="text-lg font-bold text-white mt-1 mb-2">실시간 자동 최적화</h3>
+                                <span class="text-xs font-bold text-naver uppercase">특징 03</span>
+                                <h3 class="text-lg font-bold text-white mt-1 mb-2">실시간 학습 성과 최적화</h3>
                                 <p class="text-slate-300 text-xs leading-relaxed">
                                     광고가 나가는 동안 실시간으로 구매가 일어나는 지면과 고객을 AI가 공부합니다. 성과가 안 좋은 곳의 돈은 아끼고, 잘 팔리는 곳에 예산을 집중합니다.
                                 </p>
                             </div>
                             <div class="mt-4 pt-3 border-t border-slate-700 text-[11px] text-slate-400">
-                                ➔ 시간이 지날수록 광고 효율이 더 좋아짐
+                                ➔ <strong>실제 검증 성과:</strong> 고객 획득 비용 <strong>61% 절감</strong> 효과 입증
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- SLIDE 6: 실제 검증된 성과 -->
-            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-slate-900">
-                <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
-                    <div>
-                        <span class="text-naver font-bold text-xs uppercase tracking-wider">06. PROVEN DATA</span>
-                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
-                            실제 집행 데이터로 입증된 압도적인 성과
-                        </h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-1">기존 방식과 비교 테스트했을 때 나타난 실제 성과 수치입니다.</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 text-center">
-                            <div class="text-xs text-slate-400 font-medium">새로운 손님 비율</div>
-                            <div class="text-3xl font-black text-naver my-2">70%</div>
-                            <div class="text-[11px] text-slate-300 leading-relaxed">
-                                기존 광고로는 한 번도 못 만났던 완전 신규 고객 유입
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 text-center">
-                            <div class="text-xs text-slate-400 font-medium">반응 없던 손님 재유입</div>
-                            <div class="text-3xl font-black text-naver my-2">65%</div>
-                            <div class="text-[11px] text-slate-300 leading-relaxed">
-                                3달 동안 광고를 안 보던 쿨한 손님들의 지갑을 열게 함
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 text-center">
-                            <div class="text-xs text-slate-400 font-medium">구매 전환율 증가</div>
-                            <div class="text-3xl font-black text-emerald-400 my-2">1.7배 ↑</div>
-                            <div class="text-[11px] text-slate-300 leading-relaxed">
-                                방문자 100명당 구매하는 비율이 4.2%에서 7.2%로 껑충
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 text-center">
-                            <div class="text-xs text-slate-400 font-medium">광고비 대비 매출(ROAS)</div>
-                            <div class="text-3xl font-black text-emerald-400 my-2">2.7배 ↑</div>
-                            <div class="text-[11px] text-slate-300 leading-relaxed">
-                                광고비 100원 쓸 때 매출이 129원에서 350원으로 대폭 상승
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 대형 브랜드 실증 사례 -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-5 flex items-center justify-between">
-                            <div>
-                                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">대형 스마트폰 브랜드</span>
-                                <h4 class="text-base font-bold text-white mt-1">1억 원 이상 대형 예산 집행</h4>
-                                <p class="text-xs text-slate-400 mt-1">예산이 커도 낭비 없이 완벽하게 매출로 연결</p>
-                            </div>
-                            <div class="text-right">
-                                <div class="text-xs text-slate-400">광고비 대비 매출</div>
-                                <div class="text-2xl font-black text-naver">3,853%</div>
-                                <div class="text-[10px] text-slate-400">클릭당 단가 994원 달성</div>
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-5 flex items-center justify-between">
-                            <div>
-                                <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 text-[10px] font-bold">건강식품 / 모바일게임</span>
-                                <h4 class="text-base font-bold text-white mt-1">AI 자동 최적화 실전 테스트</h4>
-                                <p class="text-xs text-slate-400 mt-1">기존 방식 대비 획득 비용 대폭 절감</p>
-                            </div>
-                            <div class="text-right">
-                                <div class="text-xs text-slate-400">손님 획득 비용</div>
-                                <div class="text-xl font-black text-naver">61% 절감 ↓</div>
-                                <div class="text-[10px] text-slate-400">구매 전환율 5.9배 상승</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- SLIDE 7: 구매 연결 구조 -->
+            <!-- SLIDE 5: UTA 자연어 커스텀 타겟팅 -->
             <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-darknavy">
                 <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
                     <div>
-                        <span class="text-naver font-bold text-xs uppercase tracking-wider">07. FULL-FUNNEL REVENUE</span>
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">05. NATURAL LANGUAGE AI (UTA)</span>
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
-                            단순 노출이 아닌, 최종 결제까지 이어지는 원스톱 구조
+                            말로 설명하면 원하는 고객이 완성되는 '커스텀 타겟팅 (UTA)'
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">정해진 카테고리 체크박스를 넘어, 일상 언어로 문장을 적으면 네이버 AI가 딱 맞는 타겟 그룹을 추출합니다.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-7 space-y-4">
+                            <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 space-y-3">
+                                <div class="text-xs font-bold text-naver uppercase flex items-center gap-1.5">
+                                    <i data-lucide="sparkles" class="w-4 h-4"></i> 실제 문장 입력 예시
+                                </div>
+                                <div class="p-3.5 bg-slate-900 rounded-xl border border-slate-700/80 text-sm font-medium text-slate-100">
+                                    "달리기, 헬스, 수영 같은 운동을 자주 하고 음악을 즐겨 들어서 무선 이어폰이 필요한 3040 여성 손님 찾아줘."
+                                </div>
+                                <div class="text-xs text-slate-300 leading-relaxed">
+                                    이렇게 적기만 하면, AI가 네이버 전체 이용자 중에서 해당 취향과 실제 행동을 가진 사람들을 정밀하게 뽑아 광고 그룹으로 만들어줍니다.
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-3 text-center">
+                                <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
+                                    <div class="text-xs text-slate-400 font-medium">새로운 손님 비율</div>
+                                    <div class="text-base sm:text-lg font-bold text-naver mt-1">70% 발굴</div>
+                                </div>
+                                <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
+                                    <div class="text-xs text-slate-400 font-medium">구매 전환율 향상</div>
+                                    <div class="text-base sm:text-lg font-bold text-white mt-1">1.7배 상승</div>
+                                </div>
+                                <div class="bg-slate-800/70 p-3 rounded-xl border border-slate-700">
+                                    <div class="text-xs text-slate-400 font-medium">매출 수익률 개선</div>
+                                    <div class="text-base sm:text-lg font-bold text-emerald-400 mt-1">2.7배 달성</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-5 bg-slate-800/90 border border-naver/40 rounded-2xl p-6 space-y-4">
+                            <div class="text-sm font-bold text-white flex items-center justify-between">
+                                <span>네이버 7가지 실제 행동 데이터 분석</span>
+                                <span class="px-2 py-0.5 rounded bg-naver text-darknavy text-xs font-black">전 영역 분석</span>
+                            </div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                단순 클릭 3종을 넘어, <strong>네이버의 7개 핵심 서비스 행동 데이터</strong>를 종합 분석하여 진짜 구매할 사람을 찾습니다.
+                            </p>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="p-2 bg-slate-900 rounded-lg border border-slate-700 text-slate-200">① 네이버 검색 기록</div>
+                                <div class="p-2 bg-slate-900 rounded-lg border border-slate-700 text-slate-200">② 상품 둘러본 기록</div>
+                                <div class="p-2 bg-slate-900 rounded-lg border border-slate-700 text-slate-200">③ 장바구니 담은 기록</div>
+                                <div class="p-2 bg-slate-900 rounded-lg border border-slate-700 text-slate-200">④ 실제 구매/결제 기록</div>
+                                <div class="p-2 bg-slate-900 rounded-lg border border-slate-700 text-slate-200">⑤ 블로그 글 소비</div>
+                                <div class="p-2 bg-slate-900 rounded-lg border border-slate-700 text-slate-200">⑥ 카페 활동 이력</div>
+                                <div class="p-2 bg-slate-900 rounded-lg border border-slate-700 text-slate-200 col-span-2 text-center text-naver font-bold">⑦ 최근 1달간 광고 반응 데이터 분석</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: 구매 연결 풀퍼널 구조 -->
+            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-slate-900">
+                <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
+                    <div>
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">06. FULL-FUNNEL REVENUE</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+                            단순 노출이 아닌, 최종 결제까지 이어지는 원스톱 매출 구조
                         </h2>
                         <p class="text-xs sm:text-sm text-slate-400 mt-1">광고를 보고 ➔ 둘러보고 ➔ 네이버페이로 쉽게 결제하도록 3단계로 연결합니다.</p>
                     </div>
@@ -521,7 +463,7 @@
                                 <ul class="text-xs text-slate-300 space-y-2">
                                     <li class="flex items-start gap-1.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-naver mt-0.5 shrink-0"></i>
-                                        <span><strong>타겟팅:</strong> AI 자연어(UTA) 맞춤 고객</span>
+                                        <span><strong>타겟팅:</strong> 연령/성별 + 카테고리 관심사 + UTA 타겟</span>
                                     </li>
                                     <li class="flex items-start gap-1.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-naver mt-0.5 shrink-0"></i>
@@ -529,7 +471,7 @@
                                     </li>
                                     <li class="flex items-start gap-1.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-naver mt-0.5 shrink-0"></i>
-                                        <span><strong>역할:</strong> 혜택 강조 배너로 많은 사람의 클릭 유도</span>
+                                        <span><strong>역할:</strong> 직관적 혜택 배너로 많은 사람의 유입 유도</span>
                                     </li>
                                 </ul>
                             </div>
@@ -575,7 +517,7 @@
                                 <ul class="text-xs text-slate-300 space-y-2">
                                     <li class="flex items-start gap-1.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 mt-0.5 shrink-0"></i>
-                                        <span><strong>타겟팅:</strong> AI 자동 최적화 + 장바구니 이탈 손님</span>
+                                        <span><strong>타겟팅:</strong> ADVoost 오디언스 + 장바구니 이탈 손님</span>
                                     </li>
                                     <li class="flex items-start gap-1.5">
                                         <i data-lucide="check" class="w-3.5 h-3.5 text-purple-400 mt-0.5 shrink-0"></i>
@@ -595,7 +537,64 @@
                 </div>
             </section>
 
-            <!-- SLIDE 8: 예상 매출 계산기 -->
+            <!-- SLIDE 7: 퍼널별 실전 세팅 프레임워크 -->
+            <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-darknavy">
+                <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
+                    <div>
+                        <span class="text-naver font-bold text-xs uppercase tracking-wider">07. CAMPAIGN FRAMEWORK</span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
+                            퍼널 단계별 추천 예산 배분 및 핵심 지표
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">월 예산 1,000만 원 기준으로 가장 안정적인 수익을 내는 황금 세팅 비율입니다.</p>
+                    </div>
+
+                    <div class="bg-slate-800/60 border border-slate-700 rounded-2xl overflow-hidden shadow-xl text-xs">
+                        <table class="w-full text-left">
+                            <thead class="bg-slate-800 text-slate-300 text-xs uppercase border-b border-slate-700">
+                                <tr>
+                                    <th class="p-4">구분 (퍼널 단계)</th>
+                                    <th class="p-4">추천 예산 비중</th>
+                                    <th class="p-4">월 예산 (예시)</th>
+                                    <th class="p-4">예상 방문 단가 (CPC)</th>
+                                    <th class="p-4">핵심 관리 지표 (KPI)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-700/60 text-slate-200">
+                                <tr>
+                                    <td class="p-4 font-bold text-white">1단계 : 신규 방문자 유입</td>
+                                    <td class="p-4 text-naver font-bold">30%</td>
+                                    <td class="p-4">3,000,000원</td>
+                                    <td class="p-4">180원 ~ 250원</td>
+                                    <td class="p-4">도달수, 클릭률, 브랜드 검색량 상승</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-bold text-white">2단계 : 탐색 및 장바구니</td>
+                                    <td class="p-4 text-blue-400 font-bold">40%</td>
+                                    <td class="p-4">4,000,000원</td>
+                                    <td class="p-4">300원 ~ 400원</td>
+                                    <td class="p-4">상세페이지 방문율, 장바구니 담기 수</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-bold text-white">3단계 : 즉시 결제 완성</td>
+                                    <td class="p-4 text-purple-400 font-bold">30%</td>
+                                    <td class="p-4">3,000,000원</td>
+                                    <td class="p-4">450원 ~ 600원</td>
+                                    <td class="p-4">구매 전환율, 매출 수익률(ROAS)</td>
+                                </tr>
+                                <tr class="bg-slate-800/80 font-bold">
+                                    <td class="p-4 text-naver">합계 / 전체 평균</td>
+                                    <td class="p-4 text-naver">100%</td>
+                                    <td class="p-4 text-white">10,000,000원</td>
+                                    <td class="p-4 text-white">약 320원</td>
+                                    <td class="p-4 text-naver">통합 ROAS 350% ~ 500%+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: 실시간 예상 매출 계산기 -->
             <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-slate-900">
                 <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
                     <div>
@@ -660,21 +659,21 @@
 
                             <div class="bg-slate-900/60 rounded-xl border border-slate-700/70 divide-y divide-slate-800 text-xs">
                                 <div class="p-3 flex justify-between items-center">
-                                    <span class="text-slate-300 font-medium">1단계 : 신규 방문자 모으기 (30%)</span>
+                                    <span class="text-slate-300 font-medium">1단계 : 신규 방문자 유입 (30%)</span>
                                     <div class="text-right">
                                         <span id="tab-tofu-budget" class="font-bold text-white">300만 원</span>
                                         <span id="tab-tofu-clicks" class="text-slate-400 text-[11px] block">약 14,000명 유입</span>
                                     </div>
                                 </div>
                                 <div class="p-3 flex justify-between items-center">
-                                    <span class="text-slate-300 font-medium">2단계 : 장바구니 담기 유도 (40%)</span>
+                                    <span class="text-slate-300 font-medium">2단계 : 장바구니 담기 (40%)</span>
                                     <div class="text-right">
                                         <span id="tab-mofu-budget" class="font-bold text-white">400만 원</span>
                                         <span id="tab-mofu-clicks" class="text-slate-400 text-[11px] block">약 11,500명 유입</span>
                                     </div>
                                 </div>
                                 <div class="p-3 flex justify-between items-center">
-                                    <span class="text-slate-300 font-medium">3단계 : 즉시 결제 완성 (30%)</span>
+                                    <span class="text-slate-300 font-medium">3단계 : 즉시 결제 유도 (30%)</span>
                                     <div class="text-right">
                                         <span id="tab-bofu-budget" class="font-bold text-white">300만 원</span>
                                         <span id="tab-bofu-clicks" class="text-slate-400 text-[11px] block">약 5,750명 결제 유도</span>
@@ -688,7 +687,7 @@
                                     <div id="res-revenue" class="text-xl font-black text-naver">약 4,200만 원</div>
                                 </div>
                                 <button onclick="nextSlide()" class="px-4 py-2 rounded-lg bg-naver text-white text-xs font-bold hover:bg-naver-hover transition-all">
-                                    실전 팁 보기 ➔
+                                    운영 팁 보기 ➔
                                 </button>
                             </div>
                         </div>
@@ -702,9 +701,9 @@
                     <div>
                         <span class="text-naver font-bold text-xs uppercase tracking-wider">09. OPERATION TIPS</span>
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
-                            광고비 낭비 없이 성과 내는 4가지 실전 원칙
+                            광고비 낭비 없이 최고 효율을 내는 4대 실전 수칙
                         </h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-1">AI가 가장 좋은 효율을 낼 수 있도록 도와주는 간단한 방법들입니다.</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">실패 없이 안정적인 매출 성장을 만들기 위한 필수 운영 원칙입니다.</p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -713,7 +712,7 @@
                                 <i data-lucide="clock" class="w-5 h-5"></i> ① 처음 1주일은 AI 공부 시간 주기
                             </div>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                광고를 켜자마자 하루 이틀 만에 설정을 바꾸면 AI가 공부하던 흐름이 끊깁니다. 최소 1주일은 설정을 유지해주셔야 진짜 구매할 손님들을 정확히 찾아냅니다.
+                                광고를 시작하자마자 하루 이틀 만에 설정을 바꾸면 AI가 공부하던 흐름이 끊깁니다. 최소 1주일은 설정을 유지해주셔야 진짜 구매할 손님들을 정확히 찾아냅니다.
                             </p>
                         </div>
 
@@ -722,13 +721,13 @@
                                 <i data-lucide="layout" class="w-5 h-5"></i> ② 다양한 크기의 배너 이미지 준비하기
                             </div>
                             <p class="text-xs text-slate-300 leading-relaxed">
-                                AI가 살 사람을 발견해도 보여줄 이미지 크기(가로형, 세로형, 정사각형 등)가 없으면 광고가 안 나갑니다. 여러 형태의 사진을 등록해두면 노출 기회를 100% 살릴 수 있습니다.
+                                AI가 살 사람을 발견해도 보여줄 배너 이미지 규격(가로형, 세로형, 피드형 등)이 없으면 광고가 안 나갑니다. 여러 형태의 사진을 등록해두면 노출 기회를 100% 살릴 수 있습니다.
                             </p>
                         </div>
 
                         <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6">
                             <div class="flex items-center gap-2 text-naver font-bold text-base mb-2">
-                                <i data-lucide="check-check" class="w-5 h-5"></i> ③ 구매 완료 추적 코드 꼭 켜두기
+                                <i data-lucide="check-check" class="w-5 h-5"></i> ③ 구매 완료 추적 코드 연동하기
                             </div>
                             <p class="text-xs text-slate-300 leading-relaxed">
                                 쇼핑몰에 '장바구니 담기'와 '구매 완료' 코드를 연결해두면, AI가 진짜 결제하는 손님들의 공통점을 학습해서 비슷한 사람들을 더 많이 데려옵니다.
@@ -737,7 +736,7 @@
 
                         <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6">
                             <div class="flex items-center gap-2 text-naver font-bold text-base mb-2">
-                                <i data-lucide="pie-chart" class="w-5 h-5"></i> ④ 1,000만 원당 타겟 그룹 2개 이하 운영
+                                <i data-lucide="pie-chart" class="w-5 h-5"></i> ④ 1,000만 원당 광고 그룹 2개 이하 집중
                             </div>
                             <p class="text-xs text-slate-300 leading-relaxed">
                                 예산을 너무 여러 군데로 쪼개면 AI가 학습할 데이터가 부족해집니다. 월 1,000만 원 기준으로 2개 정도의 그룹에 집중하는 것이 가장 효율적입니다.
@@ -747,7 +746,7 @@
                 </div>
             </section>
 
-            <!-- SLIDE 10: 4대 대표 카테고리별 8주간 가상 개선 레퍼런스 -->
+            <!-- SLIDE 10: 4대 대표 업종별 8주간 성장 레퍼런스 -->
             <section class="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 md:p-12 pt-20 pb-20 bg-slate-900">
                 <div class="max-w-6xl w-full mx-auto space-y-6 slide-content-scroll max-h-[85vh] overflow-y-auto py-2">
                     <div>
@@ -755,10 +754,10 @@
                         <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1">
                             대표 4개 업종별 8주간 광고 개선 성장표
                         </h2>
-                        <p class="text-xs sm:text-sm text-slate-400 mt-1">네이버 AI 타겟팅을 도입했을 때, 1주차 세팅부터 8주차 안정기까지 실제로 일어나는 성과 변화입니다.</p>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">네이버 GFA를 도입했을 때, 1주차 세팅부터 8주차 안정기까지 실제로 일어나는 성과 변화입니다.</p>
                     </div>
 
-                    <!-- 4 Category Cards -->
+                    <!-- 4 Category Reference Cards -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <!-- Case 1: 패션 / 뷰티 -->
                         <div class="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 space-y-3">
@@ -770,7 +769,7 @@
                             </div>
                             
                             <div class="p-3 bg-slate-900 rounded-xl border border-slate-700/70 text-xs text-slate-300">
-                                <strong>적용 AI 타겟:</strong> "2030 트렌디 룩에 관심 많고 백화점/디자이너 뷰티를 구매하는 여성"
+                                <strong>타겟팅 세팅:</strong> 2030 트렌디 룩 관심사 + 디자이너 뷰티 구매 이력 유저
                             </div>
 
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
@@ -805,7 +804,7 @@
                             </div>
 
                             <div class="p-3 bg-slate-900 rounded-xl border border-slate-700/70 text-xs text-slate-300">
-                                <strong>적용 AI 타겟:</strong> "야근/피로 회복 영양제를 검색하고 간편 건강식을 정기 결제하는 직장인"
+                                <strong>타겟팅 세팅:</strong> 피로 회복 영양제 검색 이력 + 건강식 정기 구매 고객
                             </div>
 
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
@@ -840,7 +839,7 @@
                             </div>
 
                             <div class="p-3 bg-slate-900 rounded-xl border border-slate-700/70 text-xs text-slate-300">
-                                <strong>적용 AI 타겟:</strong> "신혼 입주나 아파트 이사를 앞두고 공간 맞춤형 가구를 찾는 3040 세대"
+                                <strong>타겟팅 세팅:</strong> 신혼 입주/아파트 이사 키워드 검색 + 맞춤형 가구 카탈로그
                             </div>
 
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
@@ -875,7 +874,7 @@
                             </div>
 
                             <div class="p-3 bg-slate-900 rounded-xl border border-slate-700/70 text-xs text-slate-300">
-                                <strong>적용 AI 타겟:</strong> "1인 가구 또는 신혼부부 중 가성비 스마트 가전과 편의 서비스를 찾는 유저"
+                                <strong>타겟팅 세팅:</strong> 1인 가구/신혼 스마트 가전 관심 + ADVoost 자동 최적화
                             </div>
 
                             <div class="grid grid-cols-3 gap-2 text-center text-xs">
@@ -902,7 +901,7 @@
                     </div>
 
                     <div class="text-center pt-2">
-                        <div class="text-xs text-slate-300 mb-2 font-medium">지금 네이버 AI 타겟팅으로 확실한 성장을 시작해보세요!</div>
+                        <div class="text-xs text-slate-300 mb-2 font-medium">지금 네이버 GFA로 우리 브랜드의 새로운 매출 성장을 시작하십시오.</div>
                         <button onclick="goToSlide(0)" class="px-6 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:text-white text-xs font-bold transition-all">
                             처음 표지로 돌아가기 (Slide 1)
                         </button>
